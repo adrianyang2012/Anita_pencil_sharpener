@@ -37,10 +37,9 @@ body, html {
   height: 100%;
 }
 
-#Home {background-color: red;}
+#Home {background-color: blue;}
 #News {background-color: green;}
-#Contact {background-color: blue;}
-#About {background-color: orange;}
+
 </style>
 </head>
 <body>
@@ -69,5 +68,23 @@ body, html {
 
 
 <p> inventions made by anita and website made by Adrian </p>
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
 </body>
 </html>
